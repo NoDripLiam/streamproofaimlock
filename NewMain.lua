@@ -161,3 +161,47 @@
            end
         end
     end)
+
+
+
+
+
+
+
+
+
+
+
+if getgenv().AutoPrediction == true then
+        wait(5.2)
+            local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+            local split = string.split(pingvalue,'(')
+            local ping = tonumber(split[1])
+                local PingNumber = pingValue[1]
+    
+     if  ping < 250 then
+            getgenv().PredictionVelocity = 4.89
+            elseif ping < 150 then
+                getgenv().PredictionVelocity = 5.43
+            elseif ping < 130 then
+                getgenv().PredictionVelocity = 6.34
+            elseif ping < 120 then
+                getgenv().PredictionVelocity = 6.54
+            elseif ping < 110 then
+                getgenv().PredictionVelocity = 6.6
+            elseif ping < 105 then
+                getgenv().PredictionVelocity = 7
+            elseif ping < 90 then
+                getgenv().PredictionVelocity = 7
+            elseif ping < 80 then
+                getgenv().PredictionVelocity = 7
+            elseif ping < 70 then
+                getgenv().PredictionVelocity = 9
+            elseif ping < 60 then
+                getgenv().PredictionVelocity = 9
+            elseif ping < 50 then
+                getgenv().PredictionVelocity = 8.7
+            elseif ping < 40 then
+                getgenv().PredictionVelocity = 10.39
+            end
+        end
